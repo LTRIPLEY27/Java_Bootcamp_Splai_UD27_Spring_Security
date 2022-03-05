@@ -98,10 +98,10 @@ OBJETIVOS:
 - Acceso vía usuario y contraseña:
 
 
-![img_7.png](img_7.png)
+![img_10.png](img_10.png)
 
 
 - Registros con credenciales unicamente:
 
 
-![img_8.png](img_8.png)
+![img_11.png](img_11.png)
