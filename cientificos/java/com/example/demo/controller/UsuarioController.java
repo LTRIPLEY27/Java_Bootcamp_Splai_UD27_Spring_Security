@@ -32,7 +32,7 @@ public class UsuarioController {
 	
 	@PostMapping("/users/")
 	public Usuario saveUsuario(@RequestBody Usuario user) {
-		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		user.setPass_user(bCryptPasswordEncoder.encode(user.getPass_user()));
 		iUsuarioDAO.save(user);
 		return user;
 	}
@@ -48,7 +48,7 @@ public class UsuarioController {
 	}
 	
 	@DeleteMapping("/users/{id}")
-	public String eliminarUser(@PathVariable(name="id")long id) {
+	public String eliminarUser(@PathVariable(name="id")int id) {
 		iUsuarioDAO.deleteById(id);
 		return "User deleted.";
 	}
