@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "reservas")
@@ -19,7 +21,9 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Temporal(TemporalType.DATE)
 	private Date comienzo;
+	@Temporal(TemporalType.DATE)
 	private Date fin;
 	
 	@ManyToOne
